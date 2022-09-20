@@ -7,11 +7,11 @@ class Settings:
     class PostgreSQL:
 
         def __init__(self):
-            self.database = local.settings['database']
-            self.host = local.settings['host']
-            self.port = local.settings['port']
-            self.user = local.settings['user']
-            self.password = local.settings['password']
+            self.database = local.settings['psql']['database']
+            self.host = local.settings['psql']['host']
+            self.port = local.settings['psql']['port']
+            self.user = local.settings['psql']['user']
+            self.password = local.settings['psql']['password']
 
     def __init__(self):
         self.psql = Settings.PostgreSQL()

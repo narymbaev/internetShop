@@ -21,7 +21,7 @@ class Database(object):
     def __init__(self):
         self.pool = None
 
-    async def connect(self, params):
+    async def connect(self, **kwargs):
         async def _init_database(connection):
             await connection.execute('SET TIME ZONE UTC')
 
@@ -41,13 +41,13 @@ class Database(object):
 
         try:
             self.pool = await create_pool(
-                database=params['database'],
-                host=params['host'],
-                port=params['port'],
-                user=params['user'],
-                password=params['password'],
+                database=kwargs['database'],
+                host=kwargs['host'],
+                port=kwargs['port'],
+                user=kwargs['user'],
+                password=kwargs['password'],
                 init=_init_database,
-                max_size=max(params.get('max_connections', 0), 5),
+                max_size=max(kwargs.get('max_connections', 0), 5),
                 min_size=3,
                 max_inactive_connection_lifetime=0,
                 command_timeout=60
