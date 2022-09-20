@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 sanic = "*"
+sqlalchemy = "*"
+aiomysql = "*"
+tortoise-orm = "*"
+asyncpg = "*"
 
 [dev-packages]
 

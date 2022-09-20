@@ -1,12 +1,15 @@
-from sanic import Sanic, response
-from sanic.response import text
+# from sanic import Sanic, text, Request
+# app = Sanic(__name__)
+# @app.post("/")
+# async def handler(request: Request):
+#     message = (
+#         request.head + b"\n\n" + request.body
+#     ).decode("utf-8")
+#     print(message)
+#     return text("Done")
+#
+# app.run(port=9999, debug=True)
 
-app = Sanic("MyHelloWorldApp")
+import sanic
 
-@app.get("/index")
-async def hello_world(request):
-    return response.json({'asdf00': 'asdf'})
-
-app.get_app(
-    'Myqwe',
-     force_create=True)
+print(sanic.__all__)
