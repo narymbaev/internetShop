@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+    <div class="container">
+    <h1>Cart Page</h1>
+    {% for item in items %}
+        <h3><a href="items/{{ item.id }}">{{ item.title }}</a></h3>
+        <h4>{{ item.cost }}</h4>
+        <h5>{{ item.description }}</h5>
+        <hr>
+    {% endfor %}
+    </div>
+
+{% endblock %}

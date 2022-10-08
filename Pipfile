@@ -4,11 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-sanic = "*"
 sqlalchemy = "*"
 aiomysql = "*"
 tortoise-orm = "*"
 asyncpg = "*"
+ujson = "*"
+jinja2 = "*"
+sanic = "*"
+sanic-ext = "*"
 
 [dev-packages]
 
