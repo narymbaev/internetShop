@@ -31,26 +31,33 @@
 
         <div class="list">
             <h4>
-            <a href="/">All</a><br>
-{#            <a href="?q=smartphones">Smartphone</a><br>#}
-{#            <a href="?q=laptops">Laptop</a><br>#}
+            <a href="/items">All</a><br>
+{#            <a href="?q=smartphone">Smartphone</a><br>#}
+{#            <a href="?q=laptop">Laptop</a><br>#}
             </h4>
             <h4>
                 {% for it in category %}
-                    <a href="?q={{it.category|lower}}">{{ it.category }}</a><br>
+                    <a href="?q={{it.name|lower}}">{{ it.name }}</a><br>
                 {% endfor %}
             </h4>
         </div>
 
-        <div class="content">
+        <div class="content container">
+            {% if not items %}
+            <h2>Sorry, there is no {{ item_name }} in market</h2>
+            {% else %}
             {% for item in items %}
+
                 <div class="item">
-                    <a href="{{ item.brand|lower }}">
-                        <h4>{{ item.brand }}</h4><br>
+                    <a href="items/{{ item.id }}">
+                        <h3>{{ item.title }}</h3>
+                        <hr>
+                        <h4>{{ item.description }}</h4><br>
                     </a>
                 </div>
 
             {% endfor %}
+            {% endif %}
         </div>
 
 </div>

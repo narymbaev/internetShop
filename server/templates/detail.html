@@ -3,9 +3,23 @@
 {% block content %}
 
     <div class="container">
-        <h1>{{ item }}</h1>
+        <h1>Detail Page</h1>
         <hr>
-        <p>{{ item }}</p>
+        <h1>{{ item.title }}</h1>
+        <h6>Description</h6>
+        <p>{{ item.description }}</p>
+        <form action="" method="POST" name="post">
+            <input type="number" name="quantity" min="1" max="{{ item.quantity }}" value="{{ quantity_in_cart }}">
+            <button class="btn btn-primary">Add to Cart</button>
+            <h5>{{ item.quantity }} in market</h5>
+        </form>
+    <form action="" method="POST" name="delete">
+                {% if quantity_in_cart >= 1 %}
+                    <input type="button" class="btn-danger" value="Delete from cart">
+                    <button class="btn btn-block">Delete</button>
+                    {% else %}
+                {% endif %}
+            </form>
     </div>
 
 {% endblock %}

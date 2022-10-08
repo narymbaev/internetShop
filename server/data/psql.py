@@ -53,7 +53,7 @@ class Database(object):
                 command_timeout=60
             )
         except ConnectionRefusedError:
-            raise RuntimeError(f'{self.__name__}: connection refused to database')
+            raise RuntimeError(f'Database: connection refused to database')
 
     @loggable
     async def execute(self, *args, **kwargs):

@@ -10,8 +10,8 @@ tortoise-orm = "*"
 asyncpg = "*"
 ujson = "*"
 jinja2 = "*"
+sanic = "*"
 sanic-ext = "*"
-sanic = {extras = ["ext"], version = "*"}
 
 [dev-packages]
 

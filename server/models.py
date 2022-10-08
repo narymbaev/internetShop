@@ -7,6 +7,8 @@ class BaseModel(Base):
     __abstract__ = True
     id = Column(INTEGER(), primary_key=True)
 
+student = BaseModel
+
 class Category(BaseModel):
     __table__name = "category"
     name = Column(String())
