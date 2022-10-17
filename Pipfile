@@ -12,6 +12,8 @@ ujson = "*"
 jinja2 = "*"
 sanic = "*"
 sanic-ext = "*"
+cryptography = "*"
+werkzeug = "*"
 
 [dev-packages]
 

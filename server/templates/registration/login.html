@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <div class="container">
+    {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
+        <form action="/login" method="post">
+            <label for=""><input type="text" name="username" placeholder="Username"></label><br><br>
+            <label for=""><input type="password" name="password" placeholder="Password"></label><br><br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+{% endblock %}
