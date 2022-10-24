@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "da544f62b525e6ca25bdaf3c243f340f5d37d95a293e6f4c18d21c617525b309"
+            "sha256": "bfef74a571f23e5e3e473e12b7e24171a439502a96d3fc480945cebc6be7e21a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -419,6 +419,14 @@
             "markers": "python_version >= '3.7'",
             "version": "==6.0.2"
         },
+        "phonenumbers": {
+            "hashes": [
+                "sha256:057d1966962fb86b3dc447bfac2c8e25ceed774509e49b180926a13a99910318",
+                "sha256:0b234c4a9519fac18d00b3c542f5b429513ea69372d4f95fbd0f716f5e2a89b5"
+            ],
+            "index": "pypi",
+            "version": "==8.12.57"
+        },
         "pycparser": {
             "hashes": [
                 "sha256:8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9",
@@ -444,10 +452,10 @@
         },
         "pytz": {
             "hashes": [
-                "sha256:2c0784747071402c6e99f0bafdb7da0fa22645f06554c7ae06bf6358897e9c91",
-                "sha256:48ce799d83b6f8aab2020e369b627446696619e79645419610b9facd909b3174"
+                "sha256:335ab46900b1465e714b4fda4963d87363264eb662aab5e65da039c25f1f5b22",
+                "sha256:c4d88f472f54d615e9cd582a5004d1e5f624854a6a27a6211591c251f22a6914"
             ],
-            "version": "==2022.4"
+            "version": "==2022.5"
         },
         "pyyaml": {
             "hashes": [
@@ -517,6 +525,14 @@
                 "sha256:9a928ed9e19a36bc019223be90a5da0ab88cdd76b101e032510b6a7073c017e9"
             ],
             "version": "==22.8.0"
+        },
+        "sanic-session": {
+            "hashes": [
+                "sha256:c9c500f015f22577d5c9c7743d637741b50f97e1689fa795318d614b6dbb58d8",
+                "sha256:ead1b62c4c7773cfaaa22d77ed0eb23b423d1d60b21e11225cc9132dff37b2dd"
+            ],
+            "index": "pypi",
+            "version": "==0.8.0"
         },
         "sqlalchemy": {
             "hashes": [

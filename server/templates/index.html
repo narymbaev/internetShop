@@ -27,40 +27,30 @@
     }
 </style>
 
-<div class="room-container">
 
-        <div class="list">
-            <h4>
-            <a href="/items">All</a><br>
-{#            <a href="?q=smartphone">Smartphone</a><br>#}
-{#            <a href="?q=laptop">Laptop</a><br>#}
-            </h4>
-            <h4>
-                {% for it in category %}
-                    <a href="?q={{it.name|lower}}">{{ it.name }}</a><br>
-                {% endfor %}
-            </h4>
+    <form method="post">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+
+<div id="container">
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group label-floating">
+            <label class="control-label">Act</label>
+            <input type="text" class="form-control" v-model="act" >
         </div>
-
-        <div class="content container">
-            {% if not items %}
-            <h2>Sorry, there is no {{ item_name }} in market</h2>
-            {% else %}
-            {% for item in items %}
-
-                <div class="item">
-                    <a href="items/{{ item.id }}">
-                        <h3>{{ item.title }}</h3>
-                        <hr>
-                        <h4>{{ item.description }}</h4><br>
-                    </a>
-                </div>
-
-            {% endfor %}
-            {% endif %}
+    </div>
+    <div class="col-md-4">
+        <div class="form-group label-floating">
+            <label class="control-label">Section </label>
+            <input type="text" class="form-control" v-model="section">
         </div>
+    </div>
 
 </div>
-
-
+</div>
+<button id="btn">Add row</button>
+        <input type="submit" value="submit">
+    </form>
 {% endblock %}

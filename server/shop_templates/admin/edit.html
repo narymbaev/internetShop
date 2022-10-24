@@ -1,0 +1,60 @@
+{% extends 'admin/master.html' %}
+
+{% block content %}
+<div class="container">
+
+    <h1>Adding Item to Database</h1>
+
+    <form action="" method="post">
+        <table class="table">
+            <tr>
+                <td>Item Title</td>
+                <td><input type="text" name="item_title" class="form-control" value="{{ item.title }}"></td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td><input type="text" name="description" class="form-control" value="{{ item.description }}"></td>
+            </tr>
+            <tr>
+                <td>Brand</td>
+                <td>
+                    <select name="brand" id="brand">
+                        <option selected="selected">Apple</option>
+                        <option value="">--</option>
+                        {% for brand in brands %}
+                            <option value="{{ brand.title }}">{{ brand.title }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Category</td>
+                <td>
+                    <select name="category" id="category">
+                        <option selected="selected">Laptop</option>
+                        <option value="--">--</option>
+                        {% for it in category %}
+                            <option value="{{ it.name }}">{{ it.name }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Cost</td>
+                <td><input type="text" name="cost" class="form-control" value="{{ item.cost }}"></td>
+            </tr>
+            <tr>
+                <td>Quantity</td>
+                <td><input type="text" name="quantity" class="form-control" value="{{ item.quantity }}"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="submit" value="Update" class="btn btn-warning">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</div>
+
+{% endblock %}
